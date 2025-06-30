@@ -5,6 +5,10 @@ public class ArbolPaquete {
         this.raiz = null;
     }
 
+    public void insertar(PaqueteE paquete){
+        raiz = insertarRecorrido(raiz, paquete);
+    }
+
     public NodoPaquete insertarRecorrido (NodoPaquete nodo, PaqueteE paquete) {
         if (nodo == null) {
             return new NodoPaquete(paquete);

@@ -4,6 +4,9 @@ public class RutaEntrega {
     public RutaEntrega() { // Constructor
         this.primero = null; // Empezar la lista vacía
     }
+    public NodoDireccion getPrimero() {
+        return this.primero;
+    }
 
     public NodoDireccion buscarDireccion (String direccion) {
         NodoDireccion actual = primero;
