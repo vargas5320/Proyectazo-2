@@ -31,4 +31,9 @@ public class Camion {
     public boolean eliminarDireccion(String direccion) {
         return ruta.eliminarDireccion(direccion);
     }
+
+    // Método agregado para acceso desde la GUI
+    public RutaEntrega getRuta() {
+        return ruta;
+    }
 }

@@ -45,5 +45,24 @@ public class ArbolPaquete {
             preOrdenRec(nodo.getDerecha());
         }
     }
-}
 
+    // método para mostrar en GUI
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        construirTexto(raiz, sb);
+        return sb.toString();
+    }
+
+    private void construirTexto(NodoPaquete nodo, StringBuilder sb) {
+        if (nodo != null) {
+            construirTexto(nodo.getIzquierda(), sb);
+            PaqueteE p = nodo.getPaquete();
+            sb.append("  - ").append(p.getDestinatario())
+              .append(" (Prioridad ").append(p.getPrioridad())
+              .append(", Cantidad ").append(p.getCantidad())
+              .append(")\n");
+            construirTexto(nodo.getDerecha(), sb);
+        }
+    }
+}
