@@ -1,0 +1,137 @@
+\doxysection{Nodo\+Direccion Class Reference}
+\hypertarget{class_nodo_direccion}{}\label{class_nodo_direccion}\index{NodoDireccion@{NodoDireccion}}
+
+
+Representa un nodo de la lista enlazada de direcciones. Contiene el nombre de la dirección, una referencia al siguiente nodo y un árbol de paquetes asociado a esa dirección.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_nodo_direccion_a5134783a178c9b3532a9764dc2060da1}{Nodo\+Direccion}} (String direccionP)
+\begin{DoxyCompactList}\small\item\em Constructor que inicializa el nodo con una dirección específica. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{class_nodo_direccion_a4c25cf81842561d43c1cf39416f3fad1}{get\+Direccion}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene el nombre de la dirección. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_nodo_direccion_af11efa068bbcf8c92352c19f14d847e9}{set\+Direccion}} (String direccion)
+\begin{DoxyCompactList}\small\item\em Establece o modifica el nombre de la dirección. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_nodo_direccion}{Nodo\+Direccion}} \mbox{\hyperlink{class_nodo_direccion_ab7faffbf31a3d44d8ada15b65d84287a}{get\+Siguiente}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene la referencia al siguiente nodo en la lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_nodo_direccion_adbdaabb3c693b16b3583f33a26597e56}{set\+Siguiente}} (\mbox{\hyperlink{class_nodo_direccion}{Nodo\+Direccion}} siguiente)
+\begin{DoxyCompactList}\small\item\em Establece el nodo siguiente en la lista enlazada. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_arbol_paquete}{Arbol\+Paquete}} \mbox{\hyperlink{class_nodo_direccion_aec76addd2afbd527e09cc36bfe4e053b}{get\+Arbol\+Paquete}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene el árbol de paquetes asociado a esta dirección. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_nodo_direccion_a1c511637ca315f2bf89780a8b9718db2}{set\+Arbol\+Paquete}} (\mbox{\hyperlink{class_arbol_paquete}{Arbol\+Paquete}} arbol\+Paquete)
+\begin{DoxyCompactList}\small\item\em Establece un nuevo árbol de paquetes para esta dirección. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representa un nodo de la lista enlazada de direcciones. Contiene el nombre de la dirección, una referencia al siguiente nodo y un árbol de paquetes asociado a esa dirección. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_nodo_direccion_a5134783a178c9b3532a9764dc2060da1}\index{NodoDireccion@{NodoDireccion}!NodoDireccion@{NodoDireccion}}
+\index{NodoDireccion@{NodoDireccion}!NodoDireccion@{NodoDireccion}}
+\doxysubsubsection{\texorpdfstring{NodoDireccion()}{NodoDireccion()}}
+{\footnotesize\ttfamily \label{class_nodo_direccion_a5134783a178c9b3532a9764dc2060da1} 
+Nodo\+Direccion.\+Nodo\+Direccion (\begin{DoxyParamCaption}\item[{String}]{direccionP}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor que inicializa el nodo con una dirección específica. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direccionP} & String con el nombre de la dirección. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_nodo_direccion_aec76addd2afbd527e09cc36bfe4e053b}\index{NodoDireccion@{NodoDireccion}!getArbolPaquete@{getArbolPaquete}}
+\index{getArbolPaquete@{getArbolPaquete}!NodoDireccion@{NodoDireccion}}
+\doxysubsubsection{\texorpdfstring{getArbolPaquete()}{getArbolPaquete()}}
+{\footnotesize\ttfamily \label{class_nodo_direccion_aec76addd2afbd527e09cc36bfe4e053b} 
+\mbox{\hyperlink{class_arbol_paquete}{Arbol\+Paquete}} Nodo\+Direccion.\+get\+Arbol\+Paquete (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene el árbol de paquetes asociado a esta dirección. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_arbol_paquete}{Arbol\+Paquete} correspondiente al nodo. 
+\end{DoxyReturn}
+\Hypertarget{class_nodo_direccion_a4c25cf81842561d43c1cf39416f3fad1}\index{NodoDireccion@{NodoDireccion}!getDireccion@{getDireccion}}
+\index{getDireccion@{getDireccion}!NodoDireccion@{NodoDireccion}}
+\doxysubsubsection{\texorpdfstring{getDireccion()}{getDireccion()}}
+{\footnotesize\ttfamily \label{class_nodo_direccion_a4c25cf81842561d43c1cf39416f3fad1} 
+String Nodo\+Direccion.\+get\+Direccion (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene el nombre de la dirección. 
+
+\begin{DoxyReturn}{Returns}
+String con el nombre de la dirección. 
+\end{DoxyReturn}
+\Hypertarget{class_nodo_direccion_ab7faffbf31a3d44d8ada15b65d84287a}\index{NodoDireccion@{NodoDireccion}!getSiguiente@{getSiguiente}}
+\index{getSiguiente@{getSiguiente}!NodoDireccion@{NodoDireccion}}
+\doxysubsubsection{\texorpdfstring{getSiguiente()}{getSiguiente()}}
+{\footnotesize\ttfamily \label{class_nodo_direccion_ab7faffbf31a3d44d8ada15b65d84287a} 
+\mbox{\hyperlink{class_nodo_direccion}{Nodo\+Direccion}} Nodo\+Direccion.\+get\+Siguiente (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene la referencia al siguiente nodo en la lista. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_nodo_direccion}{Nodo\+Direccion} siguiente nodo enlazado. 
+\end{DoxyReturn}
+\Hypertarget{class_nodo_direccion_a1c511637ca315f2bf89780a8b9718db2}\index{NodoDireccion@{NodoDireccion}!setArbolPaquete@{setArbolPaquete}}
+\index{setArbolPaquete@{setArbolPaquete}!NodoDireccion@{NodoDireccion}}
+\doxysubsubsection{\texorpdfstring{setArbolPaquete()}{setArbolPaquete()}}
+{\footnotesize\ttfamily \label{class_nodo_direccion_a1c511637ca315f2bf89780a8b9718db2} 
+void Nodo\+Direccion.\+set\+Arbol\+Paquete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_arbol_paquete}{Arbol\+Paquete}}}]{arbol\+Paquete}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Establece un nuevo árbol de paquetes para esta dirección. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arbol\+Paquete} & \doxylink{class_arbol_paquete}{Arbol\+Paquete} que se asignará al nodo. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_nodo_direccion_af11efa068bbcf8c92352c19f14d847e9}\index{NodoDireccion@{NodoDireccion}!setDireccion@{setDireccion}}
+\index{setDireccion@{setDireccion}!NodoDireccion@{NodoDireccion}}
+\doxysubsubsection{\texorpdfstring{setDireccion()}{setDireccion()}}
+{\footnotesize\ttfamily \label{class_nodo_direccion_af11efa068bbcf8c92352c19f14d847e9} 
+void Nodo\+Direccion.\+set\+Direccion (\begin{DoxyParamCaption}\item[{String}]{direccion}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Establece o modifica el nombre de la dirección. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direccion} & String con el nuevo nombre de la dirección. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_nodo_direccion_adbdaabb3c693b16b3583f33a26597e56}\index{NodoDireccion@{NodoDireccion}!setSiguiente@{setSiguiente}}
+\index{setSiguiente@{setSiguiente}!NodoDireccion@{NodoDireccion}}
+\doxysubsubsection{\texorpdfstring{setSiguiente()}{setSiguiente()}}
+{\footnotesize\ttfamily \label{class_nodo_direccion_adbdaabb3c693b16b3583f33a26597e56} 
+void Nodo\+Direccion.\+set\+Siguiente (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_nodo_direccion}{Nodo\+Direccion}}}]{siguiente}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Establece el nodo siguiente en la lista enlazada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em siguiente} & \doxylink{class_nodo_direccion}{Nodo\+Direccion} que será el siguiente en la lista. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Nodo\+Direccion.\+java\end{DoxyCompactItemize}

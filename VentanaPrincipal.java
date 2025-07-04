@@ -1,8 +1,7 @@
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
-import java.util.List;
-
+/**
+ * @class VentanaPrincipal
+ * @brief Interfaz gráfica principal del sistema de entregas. Permite agregar direcciones, agregar paquetes y visualizar la ruta de entrega.
+ */
 public class VentanaPrincipal extends JFrame {
 
     private Camion camion;
@@ -13,6 +12,9 @@ public class VentanaPrincipal extends JFrame {
     private JTextField campoDireccion;
     private JButton btnAgregarDireccion;
 
+    /**
+     * @brief Constructor que inicializa y configura todos los componentes gráficos de la ventana principal.
+     */
     public VentanaPrincipal() {
         super("Sistema de Entregas - Ruta del Camión");
 
@@ -22,22 +24,17 @@ public class VentanaPrincipal extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
-        // Panel principal
         JPanel panel = new JPanel();
         panel.setLayout(new BorderLayout());
 
-        // Panel superior - Formulario
         JPanel panelTop = new JPanel(new FlowLayout());
         campoDireccion = new JTextField(15);
         btnAgregarDireccion = new JButton("Agregar");
         panelTop.add(btnAgregarDireccion);
 
-        
         panelTop.add(new JLabel("Nueva Dirección:"));
         panelTop.add(campoDireccion);
-        
 
-        // Panel central - Áreas de texto
         JPanel panelCentro = new JPanel(new GridLayout(1, 2));
         areaDirecciones = new JTextArea();
         areaDirecciones.setEditable(false);
@@ -50,26 +47,24 @@ public class VentanaPrincipal extends JFrame {
         panelCentro.add(new JScrollPane(areaDirecciones));
         panelCentro.add(new JScrollPane(areaPaquetes));
 
-        // Panel inferior - Botón mostrar
         JPanel panelBottom = new JPanel(new FlowLayout());
         btnMostrarRuta = new JButton("Actualizar Ruta");
         panelBottom.add(btnMostrarRuta);
         btnAgregarPaquete = new JButton("Nuevo Paquete");
         panelBottom.add(btnAgregarPaquete);
 
-        // Agregar paneles al contenedor principal
         panel.add(panelTop, BorderLayout.NORTH);
         panel.add(panelCentro, BorderLayout.CENTER);
         panel.add(panelBottom, BorderLayout.SOUTH);
 
         add(panel);
 
-        // Listeners
+        // Listener para abrir ventana de ingreso de paquetes
         btnAgregarPaquete.addActionListener(e -> {
             new VentanaAgregar(this, camion.getRuta()).setVisible(true);
-            
         });
 
+        // Listener para agregar una nueva dirección a la ruta
         btnAgregarDireccion.addActionListener(e -> {
             String dir = campoDireccion.getText().trim();
             if (!dir.isEmpty()) {
@@ -79,12 +74,15 @@ public class VentanaPrincipal extends JFrame {
             }
         });
 
+        // Listener para mostrar entregas
         btnMostrarRuta.addActionListener(e -> mostrarEntregas());
 
-        // Mostrar datos de ejemplo al iniciar
         actualizarDirecciones();
     }
 
+    /**
+     * @brief Actualiza el área de texto con la lista actual de direcciones en la ruta del camión.
+     */
     private void actualizarDirecciones() {
         areaDirecciones.setText("");
         NodoDireccion actual = camion.getRuta().getPrimero();
@@ -94,6 +92,10 @@ public class VentanaPrincipal extends JFrame {
         }
     }
 
+    /**
+     * @brief Muestra en el área de texto los paquetes agrupados por dirección.
+     *        Utiliza el método toString() del árbol de paquetes.
+     */
     private void mostrarEntregas() {
         areaPaquetes.setText("");
         NodoDireccion actual = camion.getRuta().getPrimero();
@@ -104,15 +106,24 @@ public class VentanaPrincipal extends JFrame {
         }
     }
 
+    /**
+     * @brief Método principal que lanza la ventana del sistema de entregas.
+     * @param args Array de argumentos (no se utiliza).
+     */
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             new VentanaPrincipal().setVisible(true);
         });
     }
 
+    /**
+     * @brief Método público que permite a otras ventanas agregar un paquete a una dirección existente.
+     * @param direccion String con el nombre de la dirección.
+     * @param destinatario String con el nombre del destinatario del paquete.
+     */
     public void agregarPaqueteDesdeOtraVentana(String direccion, String destinatario) {
-    PaqueteE paquete = new PaqueteE(destinatario, false,"pendiente"); 
-    camion.agregarPaquete(direccion, paquete);
-    actualizarDirecciones();
+        PaqueteE paquete = new PaqueteE(destinatario, false, "pendiente"); 
+        camion.agregarPaquete(direccion, paquete);
+        actualizarDirecciones();
     }
 }

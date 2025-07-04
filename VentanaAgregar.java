@@ -1,25 +1,28 @@
-import javax.swing.*;
-import java.awt.*;
-import java.util.List;
-
-public class VentanaAgregar extends JFrame{
+/**
+ * @class VentanaAgregar
+ * @brief Ventana secundaria que permite al usuario agregar un nuevo paquete a una dirección existente.
+ */
+public class VentanaAgregar extends JFrame {
     private JComboBox<String> comboDirecciones;
     private JTextField campoDestinatario;
     private JButton btnAgregar;
     private VentanaPrincipal ventanaPrincipal;
 
-
+    /**
+     * @brief Constructor que inicializa y configura la ventana de ingreso de paquetes.
+     * @param principal Referencia a la VentanaPrincipal que gestiona el sistema.
+     * @param rutaEntrega RutaEntrega actual que contiene la lista de direcciones disponibles.
+     */
     public VentanaAgregar(VentanaPrincipal principal, RutaEntrega rutaEntrega) {
         super("Agregar paquete");
         this.ventanaPrincipal = principal;
-
 
         setSize(350, 200);
         setLocationRelativeTo(null);
         setLayout(new GridBagLayout());
 
         GridBagConstraints gbc = new GridBagConstraints();
-        gbc.insets = new Insets(5,5,5,5);
+        gbc.insets = new Insets(5, 5, 5, 5);
         gbc.fill = GridBagConstraints.HORIZONTAL;
 
         // Etiqueta y combo para dirección
@@ -33,7 +36,6 @@ public class VentanaAgregar extends JFrame{
             comboDirecciones.addItem(actual.getDireccion());
             actual = actual.getSiguiente();
         }
-
 
         gbc.gridx = 1;
         gbc.gridy = 0;
@@ -56,6 +58,10 @@ public class VentanaAgregar extends JFrame{
         gbc.gridwidth = 2;
         add(btnAgregar, gbc);
 
+        /**
+         * @brief Listener que valida la entrada del usuario, agrega el paquete a la dirección seleccionada
+         *        y cierra la ventana actual.
+         */
         btnAgregar.addActionListener(e -> {
             String direccion = (String) comboDirecciones.getSelectedItem();
             String destinatario = campoDestinatario.getText().trim();
@@ -75,7 +81,5 @@ public class VentanaAgregar extends JFrame{
 
             dispose();
         });
-    } 
-
-
+    }
 }

@@ -1,0 +1,99 @@
+\doxysection{Ruta\+Entrega Class Reference}
+\hypertarget{class_ruta_entrega}{}\label{class_ruta_entrega}\index{RutaEntrega@{RutaEntrega}}
+
+
+Representa una lista enlazada simple de direcciones de entrega. Cada nodo de la lista contiene una dirección y un árbol de paquetes.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_ruta_entrega_a6b39d0c026ed80be6b4cb24c832cacbe}\label{class_ruta_entrega_a6b39d0c026ed80be6b4cb24c832cacbe} 
+{\bfseries Ruta\+Entrega} ()
+\begin{DoxyCompactList}\small\item\em Constructor. Inicializa la lista enlazada de direcciones como vacía. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_nodo_direccion}{Nodo\+Direccion}} \mbox{\hyperlink{class_ruta_entrega_af7ae558c7aef3f89721359ef9e5c1188}{get\+Primero}} ()
+\begin{DoxyCompactList}\small\item\em Devuelve el primer nodo de la lista de direcciones. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_nodo_direccion}{Nodo\+Direccion}} \mbox{\hyperlink{class_ruta_entrega_aa35e8b7eaed6dbf967e30abb74a2b8d6}{buscar\+Direccion}} (String direccion)
+\begin{DoxyCompactList}\small\item\em Busca una dirección específica en la lista enlazada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ruta_entrega_a0248dc3187d4ec1b837d5db81c51b933}{insertar\+Direccion}} (String direccion)
+\begin{DoxyCompactList}\small\item\em Inserta una nueva dirección al final de la lista enlazada. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{class_ruta_entrega_afe7b9bdaf5a41a8bf6da89866155ce4b}{eliminar\+Direccion}} (String direccion)
+\begin{DoxyCompactList}\small\item\em Elimina una dirección específica de la lista enlazada. \end{DoxyCompactList}\item 
+\Hypertarget{class_ruta_entrega_a08d91cb9b68fc3ac3c8951bb063b7975}\label{class_ruta_entrega_a08d91cb9b68fc3ac3c8951bb063b7975} 
+void {\bfseries recorrer\+Ruta} ()
+\begin{DoxyCompactList}\small\item\em Recorre e imprime todas las direcciones de la lista enlazada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representa una lista enlazada simple de direcciones de entrega. Cada nodo de la lista contiene una dirección y un árbol de paquetes. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ruta_entrega_aa35e8b7eaed6dbf967e30abb74a2b8d6}\index{RutaEntrega@{RutaEntrega}!buscarDireccion@{buscarDireccion}}
+\index{buscarDireccion@{buscarDireccion}!RutaEntrega@{RutaEntrega}}
+\doxysubsubsection{\texorpdfstring{buscarDireccion()}{buscarDireccion()}}
+{\footnotesize\ttfamily \label{class_ruta_entrega_aa35e8b7eaed6dbf967e30abb74a2b8d6} 
+\mbox{\hyperlink{class_nodo_direccion}{Nodo\+Direccion}} Ruta\+Entrega.\+buscar\+Direccion (\begin{DoxyParamCaption}\item[{String}]{direccion}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Busca una dirección específica en la lista enlazada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direccion} & String con el nombre de la dirección a buscar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{class_nodo_direccion}{Nodo\+Direccion} que contiene la dirección, o null si no se encuentra. 
+\end{DoxyReturn}
+\Hypertarget{class_ruta_entrega_afe7b9bdaf5a41a8bf6da89866155ce4b}\index{RutaEntrega@{RutaEntrega}!eliminarDireccion@{eliminarDireccion}}
+\index{eliminarDireccion@{eliminarDireccion}!RutaEntrega@{RutaEntrega}}
+\doxysubsubsection{\texorpdfstring{eliminarDireccion()}{eliminarDireccion()}}
+{\footnotesize\ttfamily \label{class_ruta_entrega_afe7b9bdaf5a41a8bf6da89866155ce4b} 
+boolean Ruta\+Entrega.\+eliminar\+Direccion (\begin{DoxyParamCaption}\item[{String}]{direccion}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Elimina una dirección específica de la lista enlazada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direccion} & String con el nombre de la dirección a eliminar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean true si se eliminó con éxito, false si no se encontró. 
+\end{DoxyReturn}
+\Hypertarget{class_ruta_entrega_af7ae558c7aef3f89721359ef9e5c1188}\index{RutaEntrega@{RutaEntrega}!getPrimero@{getPrimero}}
+\index{getPrimero@{getPrimero}!RutaEntrega@{RutaEntrega}}
+\doxysubsubsection{\texorpdfstring{getPrimero()}{getPrimero()}}
+{\footnotesize\ttfamily \label{class_ruta_entrega_af7ae558c7aef3f89721359ef9e5c1188} 
+\mbox{\hyperlink{class_nodo_direccion}{Nodo\+Direccion}} Ruta\+Entrega.\+get\+Primero (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Devuelve el primer nodo de la lista de direcciones. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_nodo_direccion}{Nodo\+Direccion} el primer nodo de la lista. 
+\end{DoxyReturn}
+\Hypertarget{class_ruta_entrega_a0248dc3187d4ec1b837d5db81c51b933}\index{RutaEntrega@{RutaEntrega}!insertarDireccion@{insertarDireccion}}
+\index{insertarDireccion@{insertarDireccion}!RutaEntrega@{RutaEntrega}}
+\doxysubsubsection{\texorpdfstring{insertarDireccion()}{insertarDireccion()}}
+{\footnotesize\ttfamily \label{class_ruta_entrega_a0248dc3187d4ec1b837d5db81c51b933} 
+void Ruta\+Entrega.\+insertar\+Direccion (\begin{DoxyParamCaption}\item[{String}]{direccion}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserta una nueva dirección al final de la lista enlazada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direccion} & String con el nombre de la dirección a insertar. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ruta\+Entrega.\+java\end{DoxyCompactItemize}

@@ -1,0 +1,98 @@
+\doxysection{Camion Class Reference}
+\hypertarget{class_camion}{}\label{class_camion}\index{Camion@{Camion}}
+
+
+Representa un camión que realiza entregas. Mantiene una lista enlazada de direcciones, cada una con su propio árbol de paquetes.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_camion_ae497fc13bb355806232a34a3a4dd0eef}\label{class_camion_ae497fc13bb355806232a34a3a4dd0eef} 
+{\bfseries Camion} ()
+\begin{DoxyCompactList}\small\item\em Constructor que inicializa el camión con una nueva ruta vacía. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camion_ab5953ba345604675ceb85c65dc01e30b}{agregar\+Direccion}} (String direccion)
+\begin{DoxyCompactList}\small\item\em Agrega una nueva dirección a la ruta del camión. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camion_a78398b3a897c7f0639d42db078726cc0}{agregar\+Paquete}} (String direccion, \mbox{\hyperlink{class_paquete_e}{PaqueteE}} paquete)
+\begin{DoxyCompactList}\small\item\em Agrega un paquete a una dirección específica de la ruta. \end{DoxyCompactList}\item 
+\Hypertarget{class_camion_a2b5099de2b9047c523cf81c14fe207cb}\label{class_camion_a2b5099de2b9047c523cf81c14fe207cb} 
+void {\bfseries mostrar\+Entregas} ()
+\begin{DoxyCompactList}\small\item\em Muestra todas las entregas organizadas por dirección, recorriendo la lista de direcciones y el árbol de paquetes de cada una. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{class_camion_ad3f4b2b3464fc02d4c0dcc34de6d1ec1}{eliminar\+Direccion}} (String direccion)
+\begin{DoxyCompactList}\small\item\em Elimina una dirección de la ruta del camión. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_ruta_entrega}{Ruta\+Entrega}} \mbox{\hyperlink{class_camion_a40500b229e914d3464c4aaecc2d39b32}{get\+Ruta}} ()
+\begin{DoxyCompactList}\small\item\em Retorna la ruta de entrega actual del camión. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representa un camión que realiza entregas. Mantiene una lista enlazada de direcciones, cada una con su propio árbol de paquetes. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_camion_ab5953ba345604675ceb85c65dc01e30b}\index{Camion@{Camion}!agregarDireccion@{agregarDireccion}}
+\index{agregarDireccion@{agregarDireccion}!Camion@{Camion}}
+\doxysubsubsection{\texorpdfstring{agregarDireccion()}{agregarDireccion()}}
+{\footnotesize\ttfamily \label{class_camion_ab5953ba345604675ceb85c65dc01e30b} 
+void Camion.\+agregar\+Direccion (\begin{DoxyParamCaption}\item[{String}]{direccion}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Agrega una nueva dirección a la ruta del camión. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direccion} & String que representa la dirección a agregar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_camion_a78398b3a897c7f0639d42db078726cc0}\index{Camion@{Camion}!agregarPaquete@{agregarPaquete}}
+\index{agregarPaquete@{agregarPaquete}!Camion@{Camion}}
+\doxysubsubsection{\texorpdfstring{agregarPaquete()}{agregarPaquete()}}
+{\footnotesize\ttfamily \label{class_camion_a78398b3a897c7f0639d42db078726cc0} 
+void Camion.\+agregar\+Paquete (\begin{DoxyParamCaption}\item[{String}]{direccion}{, }\item[{\mbox{\hyperlink{class_paquete_e}{PaqueteE}}}]{paquete}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Agrega un paquete a una dirección específica de la ruta. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direccion} & String con el nombre de la dirección donde se entregará el paquete. \\
+\hline
+{\em paquete} & Objeto de tipo \doxylink{class_paquete_e}{PaqueteE} que representa el paquete a entregar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_camion_ad3f4b2b3464fc02d4c0dcc34de6d1ec1}\index{Camion@{Camion}!eliminarDireccion@{eliminarDireccion}}
+\index{eliminarDireccion@{eliminarDireccion}!Camion@{Camion}}
+\doxysubsubsection{\texorpdfstring{eliminarDireccion()}{eliminarDireccion()}}
+{\footnotesize\ttfamily \label{class_camion_ad3f4b2b3464fc02d4c0dcc34de6d1ec1} 
+boolean Camion.\+eliminar\+Direccion (\begin{DoxyParamCaption}\item[{String}]{direccion}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Elimina una dirección de la ruta del camión. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direccion} & String con el nombre de la dirección a eliminar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean true si la dirección fue eliminada, false si no se encontró. 
+\end{DoxyReturn}
+\Hypertarget{class_camion_a40500b229e914d3464c4aaecc2d39b32}\index{Camion@{Camion}!getRuta@{getRuta}}
+\index{getRuta@{getRuta}!Camion@{Camion}}
+\doxysubsubsection{\texorpdfstring{getRuta()}{getRuta()}}
+{\footnotesize\ttfamily \label{class_camion_a40500b229e914d3464c4aaecc2d39b32} 
+\mbox{\hyperlink{class_ruta_entrega}{Ruta\+Entrega}} Camion.\+get\+Ruta (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna la ruta de entrega actual del camión. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_ruta_entrega}{Ruta\+Entrega} objeto que representa la lista enlazada de direcciones. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Camion.\+java\end{DoxyCompactItemize}
