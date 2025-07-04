@@ -1,12 +1,14 @@
 public class PaqueteE {
     private String destinatario;
-    private int prioridad;
-    private int cantidad;
+    private boolean entregado;
+    private String estado;
+    
 
-    public PaqueteE (String destinatario, int prioridad, int cantidad) { //Constructor
+    public PaqueteE (String destinatario, boolean entregado, String estado) { //Constructor 
         this.destinatario = destinatario;
-        this.prioridad = prioridad;
-        this.cantidad = cantidad;
+        this.entregado = entregado;
+        this.estado = estado;
+        
     }
 
     //Set y gets
@@ -16,22 +18,32 @@ public class PaqueteE {
     public void setDestinatario(String destinatario) {
         this.destinatario = destinatario;
     }
-    public int getPrioridad() {
-        return prioridad;
+    public boolean getEntregado() {
+        return entregado;
     }
-    public void setPrioridad(int prioridad) {
-        this.prioridad = prioridad;
+    public void setEntregado(boolean entregado) {
+        this.entregado= entregado;
     }
-    public int getCantidad() {
-        return cantidad;
+    public  String getEstado() {
+        return estado;
     }
-    public void setCantidad(int cantidad) {
-        this.cantidad = cantidad;
+    public void setEstado(String estado) {
+        this.estado= estado;
     }
 
-    public void informacion () {
-        System.out.println("Destinatario: " + destinatario);
-        System.out.println("Prioridad: " + prioridad);
-        System.out.println("Cantidad: " + cantidad);
+    public String asingarEstado (){
+        if(entregado){
+            estado = "entregado";
+        }
+        else {
+            estado= "pendiente";
+        }
+        return estado;
     }
+   
+    //public void informacion () {
+        //System.out.println("Destinatario: " + destinatario);
+        //System.out.println("Prioridad: " + prioridad);
+        //System.out.println("Cantidad: " + cantidad);
+    //}
 }

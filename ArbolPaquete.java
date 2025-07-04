@@ -29,7 +29,7 @@ public class ArbolPaquete {
     private void ordenRec(NodoPaquete nodo) {
         if (nodo != null) {
             ordenRec(nodo.getIzquierda());
-            nodo.getPaquete().informacion();
+            nodo.getPaquete();
             ordenRec(nodo.getDerecha());
         }
     }
@@ -40,7 +40,7 @@ public class ArbolPaquete {
 
     private void preOrdenRec(NodoPaquete nodo) {
         if (nodo != null) {
-            nodo.getPaquete().informacion();
+            nodo.getPaquete();
             preOrdenRec(nodo.getIzquierda());
             preOrdenRec(nodo.getDerecha());
         }
@@ -59,8 +59,7 @@ public class ArbolPaquete {
             construirTexto(nodo.getIzquierda(), sb);
             PaqueteE p = nodo.getPaquete();
             sb.append("  - ").append(p.getDestinatario())
-              .append(" (Prioridad ").append(p.getPrioridad())
-              .append(", Cantidad ").append(p.getCantidad())
+              .append(" estado: ").append(p.getEstado())
               .append(")\n");
             construirTexto(nodo.getDerecha(), sb);
         }
