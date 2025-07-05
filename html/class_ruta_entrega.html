@@ -134,6 +134,12 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>recorrerRuta</b> ()</td></tr>
 <tr class="memdesc:a08d91cb9b68fc3ac3c8951bb063b7975"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recorre e imprime todas las direcciones de la lista enlazada. <br /></td></tr>
 <tr class="separator:a08d91cb9b68fc3ac3c8951bb063b7975"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7da8086c5a945cdbc40a5c514c14195e" id="r_a7da8086c5a945cdbc40a5c514c14195e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7da8086c5a945cdbc40a5c514c14195e">guardarEnArchivo</a> (String nombreArchivo)</td></tr>
+<tr class="memdesc:a7da8086c5a945cdbc40a5c514c14195e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Guarda la lista de direcciones y sus paquetes en un archivo de texto.  <br /></td></tr>
+<tr class="separator:a7da8086c5a945cdbc40a5c514c14195e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63f1670cd452f508e4d9cbe7121a614f" id="r_a63f1670cd452f508e4d9cbe7121a614f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63f1670cd452f508e4d9cbe7121a614f">cargarDesdeArchivo</a> (String nombreArchivo)</td></tr>
+<tr class="memdesc:a63f1670cd452f508e4d9cbe7121a614f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carga la lista de direcciones y sus paquetes desde un archivo de texto.  <br /></td></tr>
+<tr class="separator:a63f1670cd452f508e4d9cbe7121a614f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Representa una lista enlazada simple de direcciones de entrega. Cada nodo de la lista contiene una dirección y un árbol de paquetes. </p>
@@ -169,6 +175,39 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>recorrerRuta</b> ()</
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_nodo_direccion.html" title="Representa un nodo de la lista enlazada de direcciones. Contiene el nombre de la dirección,...">NodoDireccion</a> que contiene la dirección, o null si no se encuentra. </dd></dl>
+
+</div>
+</div>
+<a id="a63f1670cd452f508e4d9cbe7121a614f" name="a63f1670cd452f508e4d9cbe7121a614f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63f1670cd452f508e4d9cbe7121a614f">&#9670;&#160;</a></span>cargarDesdeArchivo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RutaEntrega.cargarDesdeArchivo </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>nombreArchivo</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Carga la lista de direcciones y sus paquetes desde un archivo de texto. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nombreArchivo</td><td>String con el nombre del archivo que contiene los datos guardados. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -231,6 +270,39 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>recorrerRuta</b> ()</
 
 <p>Devuelve el primer nodo de la lista de direcciones. </p>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_nodo_direccion.html" title="Representa un nodo de la lista enlazada de direcciones. Contiene el nombre de la dirección,...">NodoDireccion</a> el primer nodo de la lista. </dd></dl>
+
+</div>
+</div>
+<a id="a7da8086c5a945cdbc40a5c514c14195e" name="a7da8086c5a945cdbc40a5c514c14195e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7da8086c5a945cdbc40a5c514c14195e">&#9670;&#160;</a></span>guardarEnArchivo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RutaEntrega.guardarEnArchivo </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>nombreArchivo</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Guarda la lista de direcciones y sus paquetes en un archivo de texto. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nombreArchivo</td><td>String con el nombre del archivo donde se guardará la información. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

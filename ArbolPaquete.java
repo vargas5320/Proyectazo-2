@@ -103,4 +103,12 @@ public class ArbolPaquete {
             construirTexto(nodo.getDerecha(), sb);
         }
     }
+
+    /**
+     * @brief Devuelve la raíz del árbol de paquetes.
+     * @return NodoPaquete nodo raíz del árbol.
+     */
+    public NodoPaquete getRaiz() {
+        return raiz;
+    }
 }

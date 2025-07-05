@@ -21,7 +21,11 @@ boolean \mbox{\hyperlink{class_ruta_entrega_afe7b9bdaf5a41a8bf6da89866155ce4b}{e
 \begin{DoxyCompactList}\small\item\em Elimina una dirección específica de la lista enlazada. \end{DoxyCompactList}\item 
 \Hypertarget{class_ruta_entrega_a08d91cb9b68fc3ac3c8951bb063b7975}\label{class_ruta_entrega_a08d91cb9b68fc3ac3c8951bb063b7975} 
 void {\bfseries recorrer\+Ruta} ()
-\begin{DoxyCompactList}\small\item\em Recorre e imprime todas las direcciones de la lista enlazada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Recorre e imprime todas las direcciones de la lista enlazada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ruta_entrega_a7da8086c5a945cdbc40a5c514c14195e}{guardar\+En\+Archivo}} (String nombre\+Archivo)
+\begin{DoxyCompactList}\small\item\em Guarda la lista de direcciones y sus paquetes en un archivo de texto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ruta_entrega_a63f1670cd452f508e4d9cbe7121a614f}{cargar\+Desde\+Archivo}} (String nombre\+Archivo)
+\begin{DoxyCompactList}\small\item\em Carga la lista de direcciones y sus paquetes desde un archivo de texto. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -46,6 +50,21 @@ Busca una dirección específica en la lista enlazada.
 \begin{DoxyReturn}{Returns}
 \doxylink{class_nodo_direccion}{Nodo\+Direccion} que contiene la dirección, o null si no se encuentra. 
 \end{DoxyReturn}
+\Hypertarget{class_ruta_entrega_a63f1670cd452f508e4d9cbe7121a614f}\index{RutaEntrega@{RutaEntrega}!cargarDesdeArchivo@{cargarDesdeArchivo}}
+\index{cargarDesdeArchivo@{cargarDesdeArchivo}!RutaEntrega@{RutaEntrega}}
+\doxysubsubsection{\texorpdfstring{cargarDesdeArchivo()}{cargarDesdeArchivo()}}
+{\footnotesize\ttfamily \label{class_ruta_entrega_a63f1670cd452f508e4d9cbe7121a614f} 
+void Ruta\+Entrega.\+cargar\+Desde\+Archivo (\begin{DoxyParamCaption}\item[{String}]{nombre\+Archivo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Carga la lista de direcciones y sus paquetes desde un archivo de texto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nombre\+Archivo} & String con el nombre del archivo que contiene los datos guardados. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_ruta_entrega_afe7b9bdaf5a41a8bf6da89866155ce4b}\index{RutaEntrega@{RutaEntrega}!eliminarDireccion@{eliminarDireccion}}
 \index{eliminarDireccion@{eliminarDireccion}!RutaEntrega@{RutaEntrega}}
 \doxysubsubsection{\texorpdfstring{eliminarDireccion()}{eliminarDireccion()}}
@@ -77,6 +96,21 @@ Devuelve el primer nodo de la lista de direcciones.
 \begin{DoxyReturn}{Returns}
 \doxylink{class_nodo_direccion}{Nodo\+Direccion} el primer nodo de la lista. 
 \end{DoxyReturn}
+\Hypertarget{class_ruta_entrega_a7da8086c5a945cdbc40a5c514c14195e}\index{RutaEntrega@{RutaEntrega}!guardarEnArchivo@{guardarEnArchivo}}
+\index{guardarEnArchivo@{guardarEnArchivo}!RutaEntrega@{RutaEntrega}}
+\doxysubsubsection{\texorpdfstring{guardarEnArchivo()}{guardarEnArchivo()}}
+{\footnotesize\ttfamily \label{class_ruta_entrega_a7da8086c5a945cdbc40a5c514c14195e} 
+void Ruta\+Entrega.\+guardar\+En\+Archivo (\begin{DoxyParamCaption}\item[{String}]{nombre\+Archivo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Guarda la lista de direcciones y sus paquetes en un archivo de texto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nombre\+Archivo} & String con el nombre del archivo donde se guardará la información. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_ruta_entrega_a0248dc3187d4ec1b837d5db81c51b933}\index{RutaEntrega@{RutaEntrega}!insertarDireccion@{insertarDireccion}}
 \index{insertarDireccion@{insertarDireccion}!RutaEntrega@{RutaEntrega}}
 \doxysubsubsection{\texorpdfstring{insertarDireccion()}{insertarDireccion()}}

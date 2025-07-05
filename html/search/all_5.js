@@ -9,6 +9,8 @@ var searchData=
   ['getizquierda_6',['getIzquierda',['../class_nodo_paquete.html#ad32ec39b797632cdc5fddd46df509842',1,'NodoPaquete']]],
   ['getpaquete_7',['getPaquete',['../class_nodo_paquete.html#a6b3861f2f33604a14b10d54086f86fb6',1,'NodoPaquete']]],
   ['getprimero_8',['getPrimero',['../class_ruta_entrega.html#af7ae558c7aef3f89721359ef9e5c1188',1,'RutaEntrega']]],
-  ['getruta_9',['getRuta',['../class_camion.html#a40500b229e914d3464c4aaecc2d39b32',1,'Camion']]],
-  ['getsiguiente_10',['getSiguiente',['../class_nodo_direccion.html#ab7faffbf31a3d44d8ada15b65d84287a',1,'NodoDireccion']]]
+  ['getraiz_9',['getRaiz',['../class_arbol_paquete.html#aaeeee805ffe0f8c1a355d2cfbbee6526',1,'ArbolPaquete']]],
+  ['getruta_10',['getRuta',['../class_camion.html#a40500b229e914d3464c4aaecc2d39b32',1,'Camion']]],
+  ['getsiguiente_11',['getSiguiente',['../class_nodo_direccion.html#ab7faffbf31a3d44d8ada15b65d84287a',1,'NodoDireccion']]],
+  ['guardarenarchivo_12',['guardarEnArchivo',['../class_ruta_entrega.html#a7da8086c5a945cdbc40a5c514c14195e',1,'RutaEntrega']]]
 ];

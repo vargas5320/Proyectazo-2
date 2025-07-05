@@ -1,3 +1,5 @@
+import java.io.*;
+
 /**
  * @class RutaEntrega
  * @brief Representa una lista enlazada simple de direcciones de entrega.
@@ -89,6 +91,62 @@ public class RutaEntrega {
         while (actual != null) {
             System.out.println("Dirección: " + actual.getDireccion());
             actual = actual.getSiguiente();
+        }
+    }
+
+    /**
+     * @brief Guarda la lista de direcciones y sus paquetes en un archivo de texto.
+     * @param nombreArchivo String con el nombre del archivo donde se guardará la información.
+     */
+    public void guardarEnArchivo(String nombreArchivo) {
+        try (PrintWriter pw = new PrintWriter(new FileWriter(nombreArchivo))) {
+            NodoDireccion actual = primero;
+            while (actual != null) {
+                pw.println("DIRECCION:" + actual.getDireccion());
+                guardarPaquetesRec(actual.getArbolPaquete().getRaiz(), pw);
+                actual = actual.getSiguiente();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * @brief Método recursivo auxiliar para guardar los paquetes de un árbol en el archivo.
+     * @param nodo NodoPaquete actual en el recorrido.
+     * @param pw PrintWriter que escribe en el archivo.
+     */
+    
+    private void guardarPaquetesRec(NodoPaquete nodo, PrintWriter pw) {
+        if (nodo != null) {
+            guardarPaquetesRec(nodo.getIzquierda(), pw);
+            PaqueteE p = nodo.getPaquete();
+            pw.println("PAQUETE:" + p.getDestinatario() + "," + p.getEntregado() + "," + p.getEstado());
+            guardarPaquetesRec(nodo.getDerecha(), pw);
+        }
+    }
+
+    /**
+     * @brief Carga la lista de direcciones y sus paquetes desde un archivo de texto.
+     * @param nombreArchivo String con el nombre del archivo que contiene los datos guardados.
+     */
+    public void cargarDesdeArchivo(String nombreArchivo) {
+        try (BufferedReader br = new BufferedReader(new FileReader(nombreArchivo))) {
+            String linea;
+            NodoDireccion actual = null;
+            while ((linea = br.readLine()) != null) {
+                if (linea.startsWith("DIRECCION:")) {
+                    String direccion = linea.substring(10);
+                    insertarDireccion(direccion);
+                    actual = buscarDireccion(direccion);
+                } else if (linea.startsWith("PAQUETE:") && actual != null) {
+                    String[] datos = linea.substring(8).split(",");
+                    PaqueteE paquete = new PaqueteE(datos[0], Boolean.parseBoolean(datos[1]), datos[2]);
+                    actual.getArbolPaquete().insertar(paquete);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

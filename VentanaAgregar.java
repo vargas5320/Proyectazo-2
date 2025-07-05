@@ -1,3 +1,7 @@
+import javax.swing.*;           // JFrame, JButton, JLabel, JTextField, JComboBox, JOptionPane
+import java.awt.*;              // GridBagLayout, GridBagConstraints, Insets, Layouts
+import java.awt.event.*;        // Eventos como ActionListener
+
 /**
  * @class VentanaAgregar
  * @brief Ventana secundaria que permite al usuario agregar un nuevo paquete a una dirección existente.
@@ -76,10 +80,18 @@ public class VentanaAgregar extends JFrame {
                 return;
             }
 
-            // Llamamos al método de ventana principal para agregar paquete
-            ventanaPrincipal.agregarPaqueteDesdeOtraVentana(direccion, destinatario);
+            try {
+                if (destinatario.matches(".*\\d.*")) {
+                    throw new IllegalArgumentException("El nombre no debe contener números.");
+                }
 
-            dispose();
+                // Llamamos al método de ventana principal para agregar paquete
+                ventanaPrincipal.agregarPaqueteDesdeOtraVentana(direccion, destinatario);
+                dispose();
+
+            } catch (IllegalArgumentException ex) {
+                JOptionPane.showMessageDialog(this, ex.getMessage());
+            }
         });
     }
 }

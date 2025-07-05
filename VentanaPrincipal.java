@@ -1,3 +1,7 @@
+import javax.swing.*;           // JFrame, JButton, JLabel, JTextField, JTextArea, JPanel, JScrollPane, JOptionPane
+import java.awt.*;              // Layouts como BorderLayout, FlowLayout, GridLayout, Insets, etc.
+import java.awt.event.*;        // Eventos como ActionListener
+
 /**
  * @class VentanaPrincipal
  * @brief Interfaz gráfica principal del sistema de entregas. Permite agregar direcciones, agregar paquetes y visualizar la ruta de entrega.
